@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://d3tjmgk5d3wf4"]
+
+[ext_resource type="PackedScene" uid="uid://b67a2yjd5qveu" path="res://Prefabs/player.tscn" id="1_6l7je"]
+[ext_resource type="PackedScene" uid="uid://bahosy27m6nti" path="res://Prefabs/map.tscn" id="1_52fb6"]
+[ext_resource type="Script" uid="uid://udp1m1p4o3vx" path="res://CS/MainScene.cs" id="1_iacmt"]
+[ext_resource type="Script" uid="uid://d37g8cwmyxnml" path="res://CS/Camera.cs" id="3_jv6wh"]
+
+[sub_resource type="Environment" id="Environment_qseaw"]
+background_mode = 1
+background_color = Color(0.84142315, 0.8947732, 0.99749583, 1)
+
+[node name="MainScene" type="Node3D" unique_id=7093714]
+script = ExtResource("1_iacmt")
+
+[node name="Player" parent="." unique_id=2002437427 instance=ExtResource("1_6l7je")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.1847687, 2.862614)
+pressure_coefficient = 25.0
+speed = 100
+
+[node name="Map" parent="." unique_id=1752091066 instance=ExtResource("1_52fb6")]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=706732963]
+transform = Transform3D(-3.858011e-08, 0.47010574, -0.8826101, 2.0548974e-08, 0.8826101, 0.47010574, 1, 0, -4.3711385e-08, -8.267515, 3.8313692, 0)
+environment = SubResource("Environment_qseaw")
+script = ExtResource("3_jv6wh")
+playerPath = NodePath("../Player")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=470161861]
+transform = Transform3D(0.3956517, 0.7567779, -0.5203335, 0.7960161, -2.645743e-08, 0.60527545, 0.45805907, -0.65367216, -0.6024074, -3.9029593, 6.2601585, -3.868576)
+light_color = Color(0.98299104, 0.9555926, 0.80609614, 1)
+light_energy = 1.842
+light_indirect_energy = 2.368
+light_volumetric_fog_energy = 2.053
+light_specular = 1.105
+shadow_enabled = true
+shadow_normal_bias = 1.868
+shadow_transmittance_bias = -2.266
+shadow_blur = 0.276

@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://b67a2yjd5qveu"]
+
+[ext_resource type="Script" uid="uid://dhvje376pbile" path="res://CS/Player.cs" id="1_y6xdh"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_qseaw"]
+radial_segments = 16
+rings = 16
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5wxv7"]
+albedo_color = Color(0.24509111, 0.2244232, 0.7523773, 1)
+
+[node name="Player" type="SoftBody3D" unique_id=223787629]
+mesh = SubResource("SphereMesh_qseaw")
+surface_material_override/0 = SubResource("StandardMaterial3D_5wxv7")
+simulation_precision = 15
+linear_stiffness = 0.8
+pressure_coefficient = 50.0
+script = ExtResource("1_y6xdh")

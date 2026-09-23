@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://bahosy27m6nti"]
+
+[sub_resource type="PrismMesh" id="PrismMesh_moiy3"]
+
+[node name="Map" type="Node3D" unique_id=1752091066]
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=1756538642]
+use_collision = true
+
+[node name="CSGMesh3D" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1800904614]
+transform = Transform3D(11.6659775, 0, 0, 0, 0.10058039, 0, 0, 0, 15.51157, 0, 0, 0)
+
+[node name="CSGMesh3D2" type="CSGBox3D" parent="CSGCombiner3D" unique_id=727959107]
+transform = Transform3D(2.0888073, 0, 0, 0, 1.037022, 0, 0, 0, 1.159085, -2.3427315, 0.5690723, 4.463328)
+
+[node name="CSGMesh3D4" type="CSGBox3D" parent="CSGCombiner3D" unique_id=417804688]
+transform = Transform3D(2.0888073, 0, 0, 0, 1.037022, 0, 0, 0, 1.159085, -3.0020041, 0.5690723, -5.3392124)
+
+[node name="CSGMesh3D5" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1898034720]
+transform = Transform3D(2.0888073, 0, 0, 0, 1.037022, 0, 0, 0, 1.159085, 0, 0.5690723, -0.48842305)
+size = Vector3(1, 1, 1.8427734)
+
+[node name="CSGMesh3D3" type="CSGBox3D" parent="CSGCombiner3D" unique_id=171167547]
+transform = Transform3D(2.0888073, 0, 0, 0, 1.037022, 0, 0, 0, 1.159085, 2.343533, 0.5690723, -3.1868353)
+
+[node name="CSGMesh3D6" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=2860023]
+transform = Transform3D(2.0888073, 0, 0, 0, 1.037022, 0, 0, 0, 1.159085, 0.022886276, 0.5690723, 1.1046419)
+mesh = SubResource("PrismMesh_moiy3")
